@@ -1,0 +1,54 @@
+{{define "content"}}
+<script type="text/javascript">
+    	var textList = [
+    		{
+    			category : "conte",
+    			fullText : "Test d'un conte long de plus de 50 caractères pour voir s'il sera tronqué."
+    		}
+
+    	]
+</script>
+<script src="ckeditor/ckeditor.js"></script>
+
+            
+<div class="inner-text">
+    <div class="title-tool">Dyslexie</div>
+    <hr/>
+    <p>
+        L'histoire raconte la rencontre entre trois ours anthropomorphiques et une petite fille appelée « Boucles d'or » en raison de sa chevelure blonde.
+
+        Une famille de trois ours composée d'un père, d'une mère et de leur enfant vit dans une petite maison dans les bois. Un jour, attendant que leur repas refroidisse, les membres de la famille ours partent se promener. Boucles d'or découvre alors la maison vide.
+
+        Curieuse, elle entre et se mêle aux affaires de la famille. Ayant faim, Boucles d'Or goûte les bols de gruau, et se régale de celui de l'ourson, ni trop chaud, ni trop froid. Ayant ensuite envie de se reposer, elle essaye chacun des trois fauteuils, mais casse celui de l'ourson, ni trop dur, ni trop moelleux. Ayant enfin sommeil, Boucles d'Or décide d'aller dormir, et, après avoir testé les trois lits, s'assoupit finalement dans celui de l'ourson, juste à sa taille.
+
+        Les trois ours reviennent à la maison alors que Boucles d'Or dort toujours. Ils la réveillent, et selon la version de l'histoire, la tuent ou l'effraient avant de la mettre en fuite. Dans les versions les plus récentes, les trois ours effraient involontairement Boucles d'Or, alors qu'ils ne lui veulent aucun mal. Elle s'enfuit ensuite en courant ; la famille ours reprend son petit déjeuner interrompu, après que le père ours a réparé la chaise de leur enfant. Dans certaines versions, les ours vont jusqu'à indiquer à Boucles d'Or le bon chemin pour rentrer chez elle.
+
+        L'interprétation de l'histoire peut différer également, mais peut se résumer à l'idée que l'intimité des autres devrait être respectée.
+    </p>
+</div>
+<div align="center">
+    <input type="button" value="Réinitialiser" onclick="reset()"/>
+</div>
+<hr/>
+<div class="sub-box">
+    <p class="sub-title">Changement du texte</p>    
+    <textarea name="editor1" id="editor1" rows="10" cols="80">
+    </textarea>
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace( 'editor1' );
+    </script>
+    <input type="button" value="Remplacer le texte" onclick="replaceInnerText('editor1')"/>
+</div>
+<hr/>
+<div class="table-responsive">
+	<table id="textArray" class="table table-striped">
+			<tr>
+				<th>Catégorie</th>
+				<th>Résumé</th>
+				<th>Action</th>
+			</tr>
+	</table>
+</div>
+{{end}}

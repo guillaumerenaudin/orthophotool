@@ -1,0 +1,23 @@
+application: orthophotool
+version: aplha-1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /image
+  static_dir: image
+
+- url: /js
+  static_dir: js
+
+- url: /ckeditor
+  static_dir: ckeditor
+  
+- url: /.*
+  script: _go_app
